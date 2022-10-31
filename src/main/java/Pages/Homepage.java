@@ -6,7 +6,8 @@ import UtilCommonMethods.Waits;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Homepage extends Commonmethods implements ToolsqaHomepageLocators {
+public class Homepage extends Commonmethods implements ToolsqaHomepageLocators
+{
     public WebDriver driver;
 
     public Homepage(WebDriver driver)
