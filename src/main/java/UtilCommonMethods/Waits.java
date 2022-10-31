@@ -17,13 +17,19 @@ public class Waits {
     {
         this.driver=driver;
     }
-    public boolean clickableelement(By xpath,int timeout)
-    {
-        boolean flag=false;
-       wait=new WebDriverWait(driver, Duration.ofSeconds(timeout));
-       wait.until(ExpectedConditions.elementToBeClickable(xpath));
-       flag = true;
-       return flag;
+    public boolean clickableelement(By xpath,int timeout) {
+        boolean flag = false;
+        try {
+            wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+            wait.until(ExpectedConditions.elementToBeClickable(xpath));
+            if(iselementpresent(xpath,timeout))
+            {
+                flag=true;
+            }
+        } catch (TimeoutException e) {
+            flag=false;
+        }
+        return flag;
     }
     public boolean iselementpresent(By xpath,int timeout)
     {

@@ -22,5 +22,7 @@ public class Alerts extends Base
      public void handleAlerts()
      {
          Assert.assertTrue(hpage.verifytoolsqaimage());
+
      }
+
  }
